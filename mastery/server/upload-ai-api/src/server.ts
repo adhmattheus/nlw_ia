@@ -1,10 +1,11 @@
+import { getAllPromptsRoutes } from './routes/get-all-prompts'
 import { fastify } from 'fastify'
+import { uploadVideoRoute } from './routes/upload-video'
 
 const app = fastify()
 
-app.get('/', () => {
-  return "chama lafera"
-});
+app.register(getAllPromptsRoutes)
+app.register(uploadVideoRoute)
 
 app.listen({
   port: 3333,
