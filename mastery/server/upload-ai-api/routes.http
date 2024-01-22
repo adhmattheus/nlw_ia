@@ -14,9 +14,19 @@ Content-Type: audio/mpeg
 
 ###
 
-POST http://localhost:3333/videos/3adbcdf4-ee6d-4fe4-9e10-805bf5b521f0/transcription
+POST http://localhost:3333/videos/9d1278be-d01d-416a-a70c-a2313eea1e11/transcription
 Content-Type: application/json
 
 {
   "prompt": "Tiringa, melado"
+}
+
+###
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "9d1278be-d01d-416a-a70c-a2313eea1e11",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto de transcrição do vídeo informada a seguir: '''{transcription}'''"
 }
