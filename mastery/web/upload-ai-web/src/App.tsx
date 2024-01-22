@@ -40,7 +40,7 @@ export function App() {
             <Textarea
               className="resize-none p-3 leading-relaxed"
               placeholder="Resultado gerado pela IA..."
-              readOnly
+                
             />
 
           </div>
